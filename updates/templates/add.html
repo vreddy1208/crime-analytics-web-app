@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Content</title>
+  {% load static %}
+  {% load widget_tweaks %}
+
+
+        <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/bootstrap-theme.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/fontAwesome.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/tooplate-style.css' %}" type = 'text/css'/>
+</head>
+<body>
+  <div class="container">
+    <h1 align = "text-left">&nbsp;&nbsp;  Add Current Updates </h1>
+      <hr><br>
+
+
+
+<form method="post">
+  {% csrf_token %}
+
+  {% for hidden_field in form.hidden_fields %}
+    {{ hidden_field }}
+  {% endfor %}
+
+  {% for field in form.visible_fields %}
+    <div class="form-group">
+      {{ field.label_tag }}
+      {% render_field field class="form-control" %}
+      {% if field.help_text %}
+        <small class="form-text text-muted">{{ field.help_text }}</small>
+      {% endif %}
+    </div>
+  {% endfor %}
+  <div class="text-center">
+  <button style="height:40px; width:200px;" type="submit" class="btn btn-primary" align:"center">Submit</button>
+</div>
+</form>
+
+  </div>
+            <footer class="text-center mt-4">
+          <h3>   Powered by Data & Developed using Django      </h3>
+
+        </footer>
+
+</body>
+</html>

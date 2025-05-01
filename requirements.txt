@@ -5,7 +5,6 @@ django-autoslug-iplweb
 django-dash
 django-nine
 django-tinymce
-django-toolbelt
 django-widget-tweaks
 matplotlib
 pandas

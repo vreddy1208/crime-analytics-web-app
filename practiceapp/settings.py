@@ -27,9 +27,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SECRET_KEY = '5%%@oahp6+8@gyv-a6&zc6+*u42lu!lx(ctnq2ban0ef3t_4)z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['crimeanalyticsdjango.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = [''crime-analytics-web-app-1.onrender.com'','127.0.0.1']
 
 
 # Application definition
